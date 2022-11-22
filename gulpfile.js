@@ -262,3 +262,4 @@ export default gulp.series(
     webConverter,
 );
 
+export { fontsConvert };

@@ -2,10 +2,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0 0 0;
+    padding-top: 50px;
 }
 
 .top-menu {
+
+    @include font('Rubik-Medium', normal, 16px, $color-grey);
 
     &__list {
         display: flex;
@@ -15,4 +17,9 @@ header {
     &__item:not(:last-child) {
         margin-right: 60px;
     }
-}
+
+    &__link:hover {
+        opacity: 0.7;
+    }
+
+} 
