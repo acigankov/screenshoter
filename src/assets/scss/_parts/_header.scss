@@ -12,14 +12,89 @@ header {
     &__list {
         display: flex;
         justify-content: flex-end;
+
     }
 
     &__item:not(:last-child) {
         margin-right: 60px;
     }
 
-    &__link:hover {
-        opacity: 0.7;
+    &__link {
+        transition: $transition;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+
+.language-toggler {
+    position: relative;
+
+    &__btn {
+        cursor: pointer;
+        @include flex(center, space-between);
+        gap: 5px;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    svg {
+        transition: $transition;
+        transform: rotate(180deg);
+    }
+    span {
+        width: 50px;
+        transition: $transition;
     }
 
-} 
+    &_open {
+        svg {
+            transform: rotate(0deg);
+        }
+
+        >.language-dropdown {
+            display: flex;
+            width: 80px;
+            visibility: visible;
+            transition: $transition;
+        }
+    }
+}
+
+.language-dropdown {
+    @include flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(140, 140, 140, 0.25);
+    border-radius: 4px;
+    padding: 0px 10px;
+    width: 80px;
+    transition: $transition;
+    visibility: visible;
+
+    &__item {
+        width: 100%;
+        text-align: center;
+        @include font('Rubik-Regular', normal, 16px, $color-grey);
+        line-height: 24px;
+        padding: 6px 0;
+        cursor: pointer;
+
+        &:hover{
+         opacity: 0.7;
+        }
+
+        &:not(:last-child) {
+         border-bottom: 1px solid rgba(38, 38, 38, 0.1);
+        }
+
+        &.active {
+            opacity: 0.7;
+        }
+    }
+ }
