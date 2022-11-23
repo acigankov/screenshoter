@@ -1,5 +1,24 @@
+@use "sass:map";
+
 .container {
+    width: 100%;
     max-width: 1470px;
-    padding: 15px 0;
+    padding: 0 15px;
     margin: 0 auto;
+
+    @media (max-width: map.get($screen-max-widths, xxl)) {
+        max-width: map.get($container-max-widths, xxl);
+    }
+    @media (max-width: map.get($screen-max-widths, xl)) {
+        max-width: map.get($container-max-widths, xl);
+    }
+    @media (max-width: map.get($screen-max-widths, lg)) {
+        max-width: map.get($container-max-widths, lg);
+    }
+    @media (max-width: map.get($screen-max-widths, md)) {
+        max-width: map.get($container-max-widths, md);
+    }
+    @media (max-width: map.get($screen-max-widths, sm)) {
+        max-width: map.get($container-max-widths, sm);
+    }
 }
