@@ -1,3 +1,80 @@
-.hero-square {
-    filter: blur(11px);
+.hero {
+    padding-top: 165px;
+    height: 100vh;
+    background-image: url('/assets/img/hero-violet.png');
+    background-repeat: no-repeat;
+    background-position: right 165px;
+    background-size: 40% 100%;
+
+    &-square {
+        position: absolute;
+        top: 110px;
+        left: 0;
+        filter: blur(11px);
+    }
+
+    &-row {
+        @include flex(center, space-between);
+        height: 100%;
+        position: relative;
+    }
+
+    &-heading {
+        max-width: 525px;
+
+        &__title {
+            @include font('Rubik-Bold', normal, 48px, $color-dark);
+            line-height: 56.88px;
+            padding-bottom: 45px;  
+
+            span {
+                display: inline-block;
+                color: $accent-color;
+                background-image: url('/assets/img/click-bg.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                padding: 0 8px;
+                margin-left: -8px;
+            }
+        }
+
+        &__subtitle {
+            @include font('Rubik-Regular', normal, 18    px, $color-grey);
+            line-height: 36px;
+            padding-bottom: 70px; 
+        }
+    }
+
+    &-image {
+        margin-right: -110px;
+        position: relative;
+
+        figcaption {
+            @include flex;
+            position: absolute;
+            width: 282px;
+            height: 108px;
+            right: 200px;
+            bottom: -72px;
+            background: url('/assets/img/img-caption-bg.png');
+            color: #fff;
+            border-radius: 10px;
+            @include font('Rubik-Light', normal, 16px, #fff);
+            line-height: 25.6px;
+            padding: 28px 50px ;
+        }
+    }
+
+    &-arrow {
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        bottom: 0;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
 }
+
