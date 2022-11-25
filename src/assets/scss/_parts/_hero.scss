@@ -19,7 +19,7 @@
         padding-top: 102px;
         background-size: 80% 299px;
         background-position: right 102px;
-        height: auto;
+        
         margin-bottom: 60px;
     }
 
@@ -44,6 +44,7 @@
 
         @media (max-width: map.get($screen-max-widths, sm)) {
             flex-direction: column-reverse;
+            justify-content: flex-end;
         }
     }
  
@@ -110,6 +111,9 @@
 
     &-image {
         position: relative;
+        z-index: 2;
+
+
         @media (max-width: map.get($screen-max-widths, sm)) {
             padding-top: 30px;
             margin-bottom: 162px;
@@ -157,6 +161,15 @@
 
         @media (max-width: map.get($screen-max-widths, sm)) {
             display: none;
+        }
+    }
+
+    .big-line {
+        position: absolute;
+        top: 50%;
+        
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            top: 40%;
         }
     }
 }

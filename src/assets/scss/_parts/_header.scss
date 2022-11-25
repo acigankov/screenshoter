@@ -4,7 +4,7 @@ header {
     position: fixed;
     padding: 50px 0;
     transition: $transition;
-    z-index: 2;
+    z-index: 3;
 
     @media (max-width: map.get($screen-max-widths, lg))  {
         padding: 20px 0;
@@ -50,6 +50,7 @@ header {
 
         //мобильное меню
         &.active {
+            position: relative;
             @include flex(center, center);
             flex-direction: column;
             position: fixed;
@@ -59,6 +60,7 @@ header {
             left: 0;
             background-color: #fff;
             overflow: hidden;
+            
             
 
             li {
