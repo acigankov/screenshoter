@@ -8,19 +8,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
     <title>{{ title }}</title>
 </head>
-<body {% if bodyClass %}class="{{ bodyClass }}"{% endif %} >
-    <div class="page-wrapper" id="pageWrapper">
+<body>
         {% include "_html/_includes/_header.html" %}
 
-        <main>
-            {% include "_html/_includes/_hero.html" %}
+    <main>
+        {% include "_html/_includes/_hero.html" %}
 
-            {% block content %}
-                <p>Тут какой то блок content</p>
-            {% endblock %}
-        </main>
-        {% include "_html/_includes/_footer.html" %}
-    </div>
+        {% block content %}
+            <p>Тут какой то блок content</p>
+        {% endblock %}
+    </main>
+    {% include "_html/_includes/_footer.html" %}
+
     <script src="/libs/jquery.min.js"></script>
     <script src="/assets/js/custom.min.js"></script>
 </body>

@@ -1,11 +1,17 @@
 const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('.top-menu__list');
 
 //отслеживание клика по бургеру
-window.addEventListener('click', function (event) {
-    if (event.target.closest('.hamburger')) {
-        hamburger.classList.toggle('is-active');
-        return false;
+hamburger.addEventListener('click', function (event) {
+    this.classList.toggle('is-active');
+
+    if(!menu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+        menu.classList.add('active');
+    } else {
+        document.body.style.overflow = 'auto';
+        menu.classList.remove('active');
     }
-    hamburger.classList.remove('is-active');
+    
 });
 
