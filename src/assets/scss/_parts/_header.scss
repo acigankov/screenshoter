@@ -1,16 +1,15 @@
+@use "sass:map";
 header {
     width: 100%;
     position: fixed;
     padding: 50px 0;
     transition: $transition;
     z-index: 2;
-    @media screen and (max-width: 1025px) {
-        padding: 20px 0;
-     }
 
-    @media screen and (max-width: 1025px) {
-       height: 82px;
-    }
+    @media (max-width: map.get($screen-max-widths, lg))  {
+        padding: 20px 0;
+        height: 82px;
+     }
 
     &.sticky {
         background-color: #fff;
@@ -22,6 +21,10 @@ header {
 .logo-wrap {
     padding-right: 20px;
     z-index: 1;
+
+    @media (max-width: map.get($screen-max-widths, lg))  {
+        padding-right: 40px;
+     }
 }
 
 .header-top{
@@ -41,7 +44,7 @@ header {
         justify-content: flex-end;
         transition: $transition;
 
-        @media screen and (max-width: 1025px) {
+        @media (max-width: map.get($screen-max-widths, lg)) {
             display: none;
         }
 
@@ -69,7 +72,7 @@ header {
     &__item:not(:last-child) {
         margin-right: 60px;
 
-        @media screen and (max-width: 1400px) {
+        @media (max-width: map.get($screen-max-widths, xxl))  {
             margin-right: 20px;
         }
     }
@@ -85,7 +88,7 @@ header {
     .hamburger {
         display: none;
 
-        @media screen and (max-width: 1025px) {
+        @media (max-width: map.get($screen-max-widths, lg))  {
             display: block;
         }
     }

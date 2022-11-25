@@ -1,31 +1,82 @@
+@use "sass:map";
+
 .hero {
-    // padding-top: 165px;
     height: 100vh;
     background-image: url('/assets/img/hero-violet.png');
     background-repeat: no-repeat;
     background-position: right 165px;
     background-size: 40% 100%;
 
+    @media (max-width: map.get($screen-max-widths, xl)) {
+        background-size: 50% 100%;
+    }
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+        background-size: 30% 100%;
+    }
+
+    @media (max-width: map.get($screen-max-widths, sm)) {
+        padding-top: 102px;
+        background-size: 80% 299px;
+        background-position: right 102px;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+
     &-square {
         position: absolute;
         top: 110px;
         left: 0;
         filter: blur(11px);
+
+        
+    @media (max-width: map.get($screen-max-widths, sm)) {
+        display: none;
+    }
+
     }
 
     &-row {
         @include flex(center, space-between);
         height: 100%;
         position: relative;
-    }
 
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            flex-direction: column-reverse;
+        }
+    }
+ 
     &-heading {
+        padding-right: 20px;
         max-width: 525px;
+
+        @media (max-width: map.get($screen-max-widths, xl)) {
+            max-width: 363px;
+        }
+
+                
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            text-align: center;
+            
+        }
 
         &__title {
             @include font('Rubik-Bold', normal, 48px, $color-dark);
             line-height: 56.88px;
             padding-bottom: 45px;  
+
+            @media (max-width: map.get($screen-max-widths, xl)) {
+                font-size: 32px;
+                line-height: 38.44px;
+                padding-bottom: 38px; 
+            }
+
+            @media (max-width: map.get($screen-max-widths, lg)) {
+                font-size: 24px;
+                line-height: 28.44px;
+                padding-bottom: 22px; 
+            }
 
             span {
                 display: inline-block;
@@ -39,15 +90,30 @@
         }
 
         &__subtitle {
-            @include font('Rubik-Regular', normal, 18    px, $color-grey);
+            @include font('Rubik-Regular', normal, 18px, $color-grey);
             line-height: 36px;
             padding-bottom: 70px; 
+
+            @media (max-width: map.get($screen-max-widths, xl)) {
+                font-size: 16px;
+                line-height: 21.6px;
+                padding-bottom: 50px; 
+            }
+ 
+            @media (max-width: map.get($screen-max-widths, lg)) {
+                font-size: 12px;
+                line-height: 21.44px;
+                padding-bottom: 30px; 
+            }
         }
     }
 
     &-image {
-        margin-right: -110px;
         position: relative;
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            padding-top: 30px;
+            margin-bottom: 162px;
+        }
 
         figcaption {
             @include flex;
@@ -61,7 +127,21 @@
             border-radius: 10px;
             @include font('Rubik-Light', normal, 16px, #fff);
             line-height: 25.6px;
-            padding: 28px 50px ;
+            padding: 28px 50px;
+
+            @media (max-width: map.get($screen-max-widths, lg)) {
+                right: 20px;
+                font-size: 12px;
+                line-height: 19.2px;
+                width: 186px;
+                height: 80px;
+                bottom: -52px;
+                padding: 15px 25px;
+            }
+            
+            @media (max-width: map.get($screen-max-widths, sm)) {
+                left: calc(50% - 186px / 2);
+            }
         }
     }
 
@@ -74,7 +154,9 @@
         &:hover {
             opacity: 0.7;
         }
-    }
- 
-}
 
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            display: none;
+        }
+    }
+}
