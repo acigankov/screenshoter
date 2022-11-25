@@ -87,14 +87,4 @@
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 
-  &::before {
-    width: 75%;
-    margin-left: 25%;
-  }
-
-  &::after {
-    width: 50%;
-    margin-left: 50%;
-  }
-
 }
