@@ -167,6 +167,7 @@
     .big-line {
         position: absolute;
         top: 50%;
+        pointer-events: none;
         
         @media (max-width: map.get($screen-max-widths, sm)) {
             top: 40%;
