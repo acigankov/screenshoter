@@ -19,8 +19,8 @@
         padding-top: 102px;
         background-size: 80% 299px;
         background-position: right 102px;
+        height: 90vh;
         
-        margin-bottom: 60px;
     }
 
 
@@ -59,6 +59,7 @@
                 
         @media (max-width: map.get($screen-max-widths, sm)) {
             text-align: center;
+            padding-right: 0;
             
         }
 
@@ -91,7 +92,7 @@
         }
 
         &__subtitle {
-            @include font('Rubik-Regular', normal, 18px, $color-grey);
+            @include font('Rubik-Regular', normal, 18px, $color-gray);
             line-height: 36px;
             padding-bottom: 70px; 
 

@@ -27,3 +27,35 @@
         max-width: map.get($container-max-widths, sm);
     }
 }
+
+
+.title {
+    @include font('Rubik-Bold', normal, 36px, $color-dark);
+    line-height: 43px;
+
+    
+    @media (max-width: map.get($screen-max-widths, xl)) {
+        font-size: 32px;
+        line-height: 38.44px;
+    }
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+        font-size: 24px;
+        line-height: 28.44px;
+    }
+}
+
+.text {
+    @include font('Rubik-Regular', normal, 18px, $color-gray);
+    line-height: 36px;
+
+    @media (max-width: map.get($screen-max-widths, xl)) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    @media (max-width: map.get($screen-max-widths, md)) {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
