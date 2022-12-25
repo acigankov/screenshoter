@@ -30,10 +30,9 @@
         left: 0;
         filter: blur(11px);
 
-        
-    @media (max-width: map.get($screen-max-widths, sm)) {
-        display: none;
-    }
+        @media (max-width: map.get($screen-max-widths, sm)) {
+            display: none;
+        }
 
     }
 
