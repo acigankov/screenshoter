@@ -6,8 +6,9 @@
   &-bg {
     position: absolute;
     right: 0;
-    top: -200px;
+    top: -50px;
     z-index: -1;
+
 
     @media (max-width: map.get($screen-max-widths, xl)) {
       width: 60%;
