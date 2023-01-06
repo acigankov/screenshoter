@@ -36,63 +36,7 @@
     }
 
 
-    &-content {
-        @include flex(center, flex-start);
-        padding-top: 260px;
 
-        @media (max-width: map.get($screen-max-widths, xl)) {
-            flex-direction: column;
-            padding-top: 100px;
-        }
-    }
-
-    &-image {
-        max-width: 705px;
-        margin-right: 153px;
-
-        @media (max-width: map.get($screen-max-widths, xl)) {
-            margin-right: 0;
-            width: 100%;
-        }
-    }
-
-    &-heading {
-        max-width: 460px;
-
-        @media (max-width: map.get($screen-max-widths, xl)) {
-            max-width: 100%;
-            width: 100%;
-            @include flex(flex-start, space-between);
-        }
-
-        @media (max-width: map.get($screen-max-widths, sm)) {
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        &__title {
-            margin-bottom: 40px;
-        }
-
-    }
-
-    &-subheading {
-        max-width: 422px;
-
-        &__subtitle {
-            margin-bottom: 40px;
-
-            @media (max-width: map.get($screen-max-widths, xl)) {
-                margin-bottom: 20px;
-            }
-        }
-
-        span {
-            color: $accent-color;
-        } 
-    }
 
     
 

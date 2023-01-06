@@ -5,7 +5,7 @@ header {
     position: fixed;
     padding: 50px 0;
     transition: $transition;
-    z-index: 3;
+    z-index: 999;
 
     @media (max-width: map.get($screen-max-widths, lg))  {
         padding: 20px 0;

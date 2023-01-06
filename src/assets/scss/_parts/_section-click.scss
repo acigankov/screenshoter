@@ -1,0 +1,17 @@
+.click {
+  position:relative;
+  margin-top: 150px;
+
+  &-bg {
+    position: absolute;
+    right: 0;
+    top: -200px;
+    z-index: -1;
+  }
+
+  &-content {
+
+  }
+
+
+}
