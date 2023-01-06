@@ -14,4 +14,27 @@
       top:0;
     }
   }
+
+  &-line {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -250px;
+    z-index: -1;
+    width: 100%;
+
+    @media (max-width: map.get($screen-max-widths, xxl)) {
+      bottom: -150px;
+    }
+
+    @media (max-width: map.get($screen-max-widths, xl)) {
+      bottom: -100px;
+    }
+
+
+    @media (max-width: map.get($screen-max-widths, md)) {
+      bottom: 0;
+    }
+
+  }
 }
