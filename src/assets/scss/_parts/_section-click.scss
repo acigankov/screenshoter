@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .click {
   position:relative;
 
@@ -6,11 +8,10 @@
     right: 0;
     top: -200px;
     z-index: -1;
+
+    @media (max-width: map.get($screen-max-widths, xl)) {
+      width: 60%;
+      top:0;
+    }
   }
-
-  &-content {
-
-  }
-
-
 }

@@ -38,6 +38,10 @@
     max-width: 460px;
 
     @media (max-width: map.get($screen-max-widths, xl)) {
+      order: 2;
+    }
+
+    @media (max-width: map.get($screen-max-widths, xl)) {
       max-width: 100%;
       width: 100%;
       @include flex(flex-start, space-between);
@@ -52,6 +56,10 @@
 
     &__title {
       margin-bottom: 40px;
+
+      @media (max-width: map.get($screen-max-widths, xl)) {
+        padding-right: 20px;
+      }
     }
 
   }
