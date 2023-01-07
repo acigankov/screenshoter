@@ -1,0 +1,87 @@
+@use "sass:map";
+
+.section {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: map.get($screen-max-widths, xl)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: map.get($screen-max-widths, sm)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &-item {
+    box-shadow: 0px 18px 45px -10px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    padding: 40px;
+
+    @media (max-width: map.get($screen-max-widths, sm)) {
+      @include flex(center, space-around);
+      padding: 20px;
+    }
+
+    &__image {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 40px;
+      transition: $transition;
+
+      &_arrow {
+        background-image: url('/assets/img/welcome/arrow.webp');
+      }
+
+      &_diskette {
+        background-image: url('/assets/img/welcome/diskette.webp');
+      }
+
+      &_puzzle {
+        background-image: url('/assets/img/welcome/puzzle.webp');
+      }
+
+      &_heart {
+        background-image: url('/assets/img/welcome/heart.webp');
+      }
+
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        margin-bottom: 0;
+      }
+
+    }
+
+    &__title {
+      @include font('Rubik-Medium', normal, 20px, $color-dark);
+      line-height: 168%;
+
+      @media (max-width: map.get($screen-max-widths, xl)) {
+        font-size: 18px;
+        line-height: 28.8px;
+      }
+
+      @media (max-width: map.get($screen-max-widths, md)) {
+        font-size: 14px;
+        line-height: 18.62px;
+      }
+    }
+
+    &:hover {
+      background-color: $accent-color;
+      box-shadow: 0px 26px 48px -23px #7421B0;
+
+      .welcome-item__image_arrow {
+        background-image: url('/assets/img/welcome/arrow-hover.webp');
+      }
+
+      .welcome-item__image_heart {
+        background-image: url('/assets/img/welcome/heart-hover.webp');
+      }
+
+      .welcome-item__title {
+        color: #fff;
+      }
+    }
+  }
+}
