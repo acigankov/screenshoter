@@ -1,0 +1,28 @@
+@use "sass:map";
+
+.features {
+  padding-top: 250px;
+  padding-bottom: 100px;
+
+  @media (max-width: map.get($screen-max-widths, xxl)) {
+    padding-top: 150px;
+  }
+
+  @media (max-width: map.get($screen-max-widths, md)) {
+    padding-top: 150px;
+  }
+
+  &-list {
+    padding-bottom: 90px;
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &-row {
+    @include flex;
+    width: 100%;
+
+  }
+}

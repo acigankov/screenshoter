@@ -28,6 +28,10 @@
       width: 80px;
       height: 80px;
       margin-bottom: 40px;
+      margin-right: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       transition: $transition;
 
       &_arrow {
@@ -44,6 +48,22 @@
 
       &_heart {
         background-image: url('/assets/img/welcome/heart.webp');
+      }
+
+      &_pencil {
+        background-image: url('/assets/img/features/pencil.webp');
+      }
+
+      &_arrows {
+        background-image: url('/assets/img/features/arrows.webp');
+      }
+
+      &_cubic {
+        background-image: url('/assets/img/features/cubic.webp');
+      }
+
+      &_drop {
+        background-image: url('/assets/img/features/drop.webp');
       }
 
       @media (max-width: map.get($screen-max-widths, sm)) {
@@ -71,15 +91,23 @@
       background-color: $accent-color;
       box-shadow: 0px 26px 48px -23px #7421B0;
 
-      .welcome-item__image_arrow {
+      .section-item__image_arrow {
         background-image: url('/assets/img/welcome/arrow-hover.webp');
       }
 
-      .welcome-item__image_heart {
+      .section-item__image_heart {
         background-image: url('/assets/img/welcome/heart-hover.webp');
       }
 
-      .welcome-item__title {
+      .section-item__image_pencil {
+        background-image: url('/assets/img/features/pencil-hover.webp');
+      }
+
+      .section-item__image_arrows {
+        background-image: url('/assets/img/features/arrows-hover.webp');
+      }
+
+      .section-item__title {
         color: #fff;
       }
     }
