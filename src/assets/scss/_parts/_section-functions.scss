@@ -2,13 +2,11 @@
 
 .functions {
   position: relative;
-  margin: 0 63px;
+  z-index: 3;
   min-height: 300px;
   padding-bottom: 60px;
 
-  @media (max-width: map.get($screen-max-widths, xl)) {
-    margin: 0 23px;
-  }
+
   @media (max-width: map.get($screen-max-widths, lg)) {
     padding-bottom: 45px;
   }
@@ -19,12 +17,16 @@
   &::before {
     content: '';
     position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: -1;
     background: linear-gradient(45deg, rgba(215, 211, 221, 0.1) 14%, rgba(223, 212, 238, 0.1));
     border: 1px solid rgba(255, 255, 255, 0.12        );
     border-radius: 30px;
     backdrop-filter: blur(20px);
+
   }
 
   &-ball {
@@ -38,6 +40,31 @@
     @media (max-width: map.get($screen-max-widths, lg)) {
       max-width: 151px;
       top: -60px;
+    }
+  }
+
+  &-cylinder {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 300px;
+    bottom: 0;
+    z-index: -2;
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      max-width: 151px;
+    }
+  }
+
+  &-cylinder-right {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 500px;
+    bottom: 0;
+    z-index: -2;
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      max-width: 50%;
     }
   }
 
@@ -144,18 +171,20 @@
           }
         }
 
-
       }
 
       &__description {
         @include font('Rubik-Regular', normal, 18px, $color-gray);
         line-height: 200%;
+        padding-right: 15px;
 
         @media (max-width: map.get($screen-max-widths, lg)) {
           font-size: 14px;
         }
         @media (max-width: map.get($screen-max-widths, sm)) {
           font-size: 12px;
+          padding-left: 15px;
+
         }
 
         &:not(:last-child) {
