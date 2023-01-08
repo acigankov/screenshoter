@@ -4,9 +4,16 @@
   position: relative;
   margin: 0 63px;
   min-height: 300px;
+  padding-bottom: 60px;
 
   @media (max-width: map.get($screen-max-widths, xl)) {
     margin: 0 23px;
+  }
+  @media (max-width: map.get($screen-max-widths, lg)) {
+    padding-bottom: 45px;
+  }
+  @media (max-width: map.get($screen-max-widths, sm)) {
+    padding-bottom: 30px;
   }
 
   &::before {
@@ -33,4 +40,131 @@
       top: -60px;
     }
   }
+
+  &-title {
+    padding: 100px 0;
+    span {
+      color: $accent-color;
+    }
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      padding: 75px 0;
+    }
+
+    @media (max-width: map.get($screen-max-widths, sm)) {
+      text-align: center;
+      padding: 30px 0;
+    }
+  }
+
+  &-list {
+    @include flex(flex-start, space-between);
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    width: 30%;
+
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      width: 100%;
+      flex-direction: row;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: map.get($screen-max-widths, sm)) {
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 40px;
+
+    }
+
+    .item-icon {
+      margin-bottom: 40px;
+
+      @media (max-width: map.get($screen-max-widths, lg)) {
+        margin-bottom:0;
+        margin-right: 60px;
+      }
+
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        margin: 0 auto 30px;
+      }
+
+      &__image {
+        max-height: 111px;
+        object-fit: cover;
+
+        @media (max-width: map.get($screen-max-widths, xl)) {
+          max-width: 80px;
+        }
+      }
+    }
+
+    .item-text {
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        text-align: center;
+      }
+
+      .text-title {
+        @include flex(flex-start, flex-start);
+        padding-bottom: 60px;
+
+        @media (max-width: map.get($screen-max-widths, lg)) {
+          padding-bottom: 30px;
+        }
+
+        @media (max-width: map.get($screen-max-widths, sm)) {
+          padding-bottom: 20px;
+          justify-content: center;
+          text-align: center;
+        }
+
+
+        &__number {
+          @include font('Rubik-Bold', normal, 36px, $accent-color);
+          padding-right: 50px;
+
+          @media (max-width: map.get($screen-max-widths, lg)) {
+            padding-right: 30px;
+            font-size: 20px;
+          }
+        }
+
+        &__title {
+          @include font('Rubik-Medium', normal, 24px, $color-dark);
+          max-width: 100px;
+
+          @media (max-width: map.get($screen-max-widths, lg)) {
+            font-size: 18px;
+          }
+          @media (max-width: map.get($screen-max-widths, sm)) {
+            max-width: max-content;
+          }
+        }
+
+
+      }
+
+      &__description {
+        @include font('Rubik-Regular', normal, 18px, $color-gray);
+        line-height: 200%;
+
+        @media (max-width: map.get($screen-max-widths, lg)) {
+          font-size: 14px;
+        }
+        @media (max-width: map.get($screen-max-widths, sm)) {
+          font-size: 12px;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+  }
+
+
 }
