@@ -35,7 +35,6 @@
   }
 
   &-ball {
-    content: '';
     position: absolute;
     right: 8%;
     top: -100px;
@@ -49,7 +48,6 @@
   }
 
   &-cylinder {
-    content: '';
     position: absolute;
     left: 0;
     top: 300px;
@@ -62,7 +60,6 @@
   }
 
   &-cylinder-right {
-    content: '';
     position: absolute;
     right: 0;
     top: 50%;
@@ -70,6 +67,15 @@
     z-index: -2;
     @media (max-width: map.get($screen-max-widths, lg)) {
       max-width: 50%;
+    }
+  }
+
+  &-line {
+    position: absolute;
+    bottom: 18%;
+    width: 100%;
+    @media (max-width: map.get($screen-max-widths, lg)) {
+      display: none;
     }
   }
 
