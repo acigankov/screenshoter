@@ -65,7 +65,7 @@
     content: '';
     position: absolute;
     right: 0;
-    top: 500px;
+    top: 50%;
     bottom: 0;
     z-index: -2;
     @media (max-width: map.get($screen-max-widths, lg)) {
@@ -93,13 +93,16 @@
     @include flex(flex-start, space-between);
     flex-wrap: wrap;
     padding: 0 30px;
+    margin-bottom: 200px;
 
     @media (max-width: map.get($screen-max-widths, lg)) {
       padding: 0 30px;
+      margin-bottom: 100px;
     }
 
     @media (max-width: map.get($screen-max-widths, sm)) {
       padding: 0;
+      margin-bottom: 60px;
     }
   }
 
@@ -196,7 +199,6 @@
         @media (max-width: map.get($screen-max-widths, sm)) {
           font-size: 12px;
           padding-left: 15px;
-
         }
 
         &:not(:last-child) {
@@ -204,5 +206,139 @@
         }
       }
     }
+  }
+
+  &-steps {
+    &__title {
+      margin-bottom: 100px;
+
+      @media (max-width: map.get($screen-max-widths, lg)) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      span {
+        color: $accent-color;
+      }
+    }
+
+    .steps-list {
+      @include flex(flex-start, space-between);
+      flex-wrap: wrap;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-bottom: 60px;
+
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        margin-bottom: 40px;
+      }
+
+    }
+
+    .steps-item {
+      width: 32%;
+
+      @media (max-width: map.get($screen-max-widths, lg)) {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-bottom: 60px;
+        }
+
+      }
+
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &__title {
+        color: $accent-color;
+        margin-bottom: 60px;
+
+        @media (max-width: map.get($screen-max-widths, lg)) {
+          margin-bottom: 30px;
+          font-size: 18px;
+        }
+      }
+
+      .item-image {
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 460px;
+        height: 200px;
+        margin: 0 auto 40px;
+        @include flex(center,center);
+        transition: all ease 0.1s;
+
+        @media (max-width: map.get($screen-max-widths, lg)) {
+          height: 192px;
+          margin: 0 auto 30px;
+        }
+
+        @media (max-width: map.get($screen-max-widths, sm)) {
+          max-width: 345px;
+          height: 150px;
+          margin: 0 auto 20px;
+        }
+
+        &__description {
+          position: absolute;
+          @include font('Rubik-Medium', normal, 12.5px, rgba($accent-color, 0.3));
+          line-height: 180%;
+          transition: all ease 0.1s;
+        }
+
+        &__button {
+          position: absolute;
+          visibility: hidden;
+          transition: all ease 0.1s;
+        }
+
+        &:hover {
+          .item-image__description {
+            opacity: 0;
+          }
+
+          .item-image__button {
+            visibility: initial;
+          }
+        }
+      }
+
+      .item-description {
+        @include font('Rubik-Regular', normal, 18px, $color-gray);
+        line-height: 180%;
+
+        @media (max-width: map.get($screen-max-widths, lg)) {
+          font-size: 14px;
+        }
+        @media (max-width: map.get($screen-max-widths, sm)) {
+          font-size: 12px;
+        }
+
+        strong {
+          @include font('Rubik-Medium', normal, inherit, $accent-color);
+          display: block;
+
+          @media (max-width: map.get($screen-max-widths, lg)) {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  &-row {
+    @include flex;
   }
 }
