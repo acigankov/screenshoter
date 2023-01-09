@@ -102,7 +102,6 @@
     margin-bottom: 200px;
 
     @media (max-width: map.get($screen-max-widths, lg)) {
-      padding: 0 30px;
       margin-bottom: 100px;
     }
 
@@ -238,9 +237,11 @@
       flex-grow: 0;
       flex-shrink: 0;
       margin-bottom: 60px;
+      padding: 0 20px;
 
       @media (max-width: map.get($screen-max-widths, sm)) {
         margin-bottom: 40px;
+        padding: 0;
       }
 
     }
