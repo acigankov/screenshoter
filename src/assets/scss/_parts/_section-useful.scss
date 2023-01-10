@@ -1,0 +1,34 @@
+@use "sass:map";
+
+.useful {
+  padding-top: 334px;
+  padding-bottom: 200px;
+
+  @media (max-width: map.get($screen-max-widths, lg)) {
+    padding-top: 234px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: map.get($screen-max-widths, sm)) {
+    padding-top: 155px;
+    padding-bottom: 60px;
+  }
+
+  &-title {
+    position: relative;
+
+    &__cloud {
+      position: absolute;
+      left: 15%;
+      top: -120px;
+      padding: 40px 24px 8px;
+      max-width: 228px;
+      height: 114px;
+      background: url('/assets/img/useful/union.png') no-repeat center / contain;
+      @include font('Rubik-Regular', normal, 16px, $color-gray);
+      line-height: 160%;
+
+
+    }
+  }
+}

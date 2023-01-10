@@ -9,38 +9,4 @@
         padding-bottom: 30px;
     }
 
-    &-row {
-        @include flex(flex-start, flex-start);
-        padding-bottom: 80px;
-
-        @media (max-width: map.get($screen-max-widths, md)) {
-            flex-direction: column;
-        }
-
-        &__title {       
-            margin-right: 96px;
-            width: 100%;
-            max-width: 480px;
-
-            @media (max-width: map.get($screen-max-widths, md)) {
-                max-width: 100%;
-                text-align: center;
-                padding-bottom: 20px;
-            }
-
-            span{
-                color: $accent-color;
-            }
-        }
-
-        &__subtitle {
-            width: 100%;
-            max-width: 580px;
-            
-            @media (max-width: map.get($screen-max-widths, md)) {
-                max-width: 100%;
-                text-align: center;
-            }
-        }
-    }
 }
