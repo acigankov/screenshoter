@@ -114,6 +114,19 @@
         }
       }
 
+      &__toggler {
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &.active {
+          transform: rotate(135deg);
+        }
+      }
+
       &__content {
         @include flex(flex-start, flex-start);
         width: 80%;
@@ -129,7 +142,6 @@
         }
 
         .content-row {
-
           &__title {
             @include font('Rubik-Medium', normal, 24px, $color-dark);
             margin-bottom: 20px;
