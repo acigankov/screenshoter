@@ -41,38 +41,40 @@
     &__cylinder {
       position: absolute;
       max-width: 200px;
-      top: 30%;
-      right: 20%;
+      top: 300px;
+      right: 250px;
       z-index: -1;
 
       @media (max-width: map.get($screen-max-widths, lg)) {
         max-width: 100px;
-        top: 32%;
+        top: 320px;
+      }
+      @media (max-width: map.get($screen-max-widths, sm)) {
+        right: 40px;
       }
     }
 
     &__sphere {
       position: absolute;
       max-width: 150px;
-      bottom: 12%;
-      right: -6%;
+      top: 684px;
+      right: -60px;
       z-index: -1;
 
       @media (max-width: map.get($screen-max-widths, lg)) {
-        bottom: 13%;
-        right: 6%;
+        right: 60px;
       }
     }
 
     &__sphere-small {
       position: absolute;
       max-width: 150px;
-      bottom: 24%;
-      right: -10%;
+      top: 587px;
+      right: -130px;
       z-index: -1;
       @media (max-width: map.get($screen-max-widths, lg)) {
-        bottom: 24%;
-        right: 4%;
+        top: 610px;
+        right: 15px;
       }
     }
   }
