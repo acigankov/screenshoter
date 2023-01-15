@@ -1,18 +1,11 @@
 const closeButtons = document.querySelectorAll('.faq-item__toggler');
 
-function closeAll(items, activeClassName) {
-    items.forEach(function (item) {
-        if(item.classList.contains(activeClassName)) {
-            item.classList.remove(activeClassName);
-        }
-    })
-}
-
 closeButtons.forEach(function (item) {
     item.addEventListener('click' , function (event) {
+       this.classList.toggle('active');
+       const targetData = item.getAttribute('data-toggler');
+       const textBlock = document.querySelector('.content-row__description[data-description="' + targetData + '"]');
 
-       closeAll(closeButtons, 'active');
-
-        this.classList.toggle('active');
+       textBlock.classList.toggle('active');
     })
 })

@@ -107,6 +107,7 @@
         padding: 30px 40px;
       }
 
+
       &:not(:last-child) {
         margin-bottom: 40px;
         @media (max-width: map.get($screen-max-widths, lg)) {
@@ -152,6 +153,11 @@
           }
 
           &__description {
+            visibility: hidden;
+            height: auto;
+            max-height: 0;
+            overflow: hidden;
+            transition: $transition;
             @include font('Rubik-Regular', normal, 18px, $color-gray);
             line-height: 32.4px;
 
@@ -162,6 +168,13 @@
             @media (max-width: map.get($screen-max-widths, sm)) {
               font-size: 12px;
               line-height: 21.6px;
+            }
+
+            &.active {
+              visibility: visible;
+              height: auto;
+              max-height: 500px;
+
             }
           }
         }
