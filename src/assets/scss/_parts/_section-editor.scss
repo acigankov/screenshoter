@@ -22,6 +22,7 @@
     bottom: -250px;
     z-index: -1;
     width: 100%;
+    pointer-events: none;
 
     @media (max-width: map.get($screen-max-widths, xxl)) {
       bottom: -150px;

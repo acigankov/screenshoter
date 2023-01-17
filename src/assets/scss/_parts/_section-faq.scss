@@ -30,6 +30,8 @@
       top: 90px;
       left: -150px;
       z-index: -1;
+      pointer-events: none;
+
 
       @media (max-width: map.get($screen-max-widths, lg)) {
         max-width: 200px;
@@ -44,6 +46,7 @@
       top: 300px;
       right: 250px;
       z-index: -1;
+      pointer-events: none;
 
       @media (max-width: map.get($screen-max-widths, lg)) {
         max-width: 100px;
@@ -60,6 +63,7 @@
       top: 684px;
       right: -60px;
       z-index: -1;
+      pointer-events: none;
 
       @media (max-width: map.get($screen-max-widths, lg)) {
         right: 60px;
@@ -72,6 +76,8 @@
       top: 587px;
       right: -130px;
       z-index: -1;
+      pointer-events: none;
+
       @media (max-width: map.get($screen-max-widths, lg)) {
         top: 610px;
         right: 15px;
